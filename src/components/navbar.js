@@ -115,7 +115,7 @@ export default function NavBar() {
           } w-full md:flex md:w-auto md:order-1`}
           id="mobile-menu-2"
         >
-          <ul className="flex flex-col p-4 mt-4 border border-gray-100 rounded-lg bg-gray-50 md:flex-row md:space-x-8 md:mt-0 md:text-sm md:font-medium md:border-0 md:bg-white">
+          {/* <ul className="flex flex-col p-4 mt-4 border border-gray-100 rounded-lg bg-gray-50 md:flex-row md:space-x-8 md:mt-0 md:text-sm md:font-medium md:border-0 md:bg-white">
             <li>
               <a
                 href="#"
@@ -125,7 +125,7 @@ export default function NavBar() {
                 Home
               </a>
             </li>
-          </ul>
+          </ul> */}
         </div>
       </div>
     </nav>
