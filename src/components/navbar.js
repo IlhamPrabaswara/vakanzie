@@ -63,26 +63,19 @@ export default function NavBar() {
                 </Link>
               </li>
               <li>
-                <a
-                  href="#"
+                <Link
+                  href="dashboard/change-password"
                   className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100"
                 >
-                  Settings
-                </a>
+                  Change password
+                </Link>
               </li>
-              <li>
-                <a
-                  href="#"
-                  className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100"
-                >
-                  Earnings
-                </a>
-              </li>
+
               <li>
                 <a
                   onClick={() => {
                     Cookies.remove("token");
-                    Router.push("dashboard/login");
+                    Router.push("/dashboard/login");
                   }}
                   href="#"
                   className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100"
