@@ -3,6 +3,7 @@ import { useState } from "react";
 import Cookies from "js-cookie";
 import Router from "next/router";
 import NavBar from "@/components/navbar";
+import Layout from "@/components/layout";
 
 export default function LogIn() {
   const [input, setInput] = useState({
@@ -42,7 +43,7 @@ export default function LogIn() {
     Router.push("/");
   };
   return (
-    <>
+    <Layout>
       <NavBar />
       <h1>Log In</h1>
       <form className="mt-6" onSubmit={handleRegister}>
@@ -84,14 +85,14 @@ export default function LogIn() {
         </div>
         <button
           type="submit"
-          className="text-white bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm w-full sm:w-auto px-5 py-2.5 text-center"
+          className="mb-2 text-white bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm w-full sm:w-auto px-5 py-2.5 text-center"
         >
           Submit
         </button>
       </form>
-      <p>
-        Don't have an account? <Link href="/dashboard/signup">Sign up</Link>
+      <p className="text-sm">
+        Don't have an account? <Link className="text-blue-700" href="/dashboard/signup">Sign up</Link>
       </p>
-    </>
+    </Layout>
   );
 }
