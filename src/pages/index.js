@@ -11,9 +11,9 @@ export default function Home({ jobData }) {
   };
   return (
     <>
-    <Head>
-      <title>Vakanzie - Home</title>
-    </Head>
+      <Head>
+        <title>Vakanzie - Home</title>
+      </Head>
       <Layout>
         <NavBar />
         <div className="h-[75vh] flex justify-center flex-col items-center">
@@ -78,7 +78,7 @@ export default function Home({ jobData }) {
               <div>
                 <Link
                   href={`/dashboard/list-job-vacancy/detail/${item.id}`}
-                  className="flex flex-col p-6 bg-white border border-gray-200 rounded-lg shadow hover:bg-gray-100 h-[350px]"
+                  className="flex flex-col p-6 bg-white border border-gray-200 rounded-lg shadow hover:bg-gray-100 min-h-[350px]"
                 >
                   <div className="flex justify-between mb-3 items-top">
                     <div className="mr-3">
@@ -100,7 +100,7 @@ export default function Home({ jobData }) {
                   </div>
 
                   <p className="font-normal mb-10 text-sm text-gray-500 flex-grow">
-                    {item.job_description.substring(0, 250) + "..."}
+                    {item.job_description.substring(0, 200) + "..."}
                   </p>
                   <div className="flex justify-between items-center">
                     <p className="text-white bg-blue-700 hover:bg-blue-800 focus:outline-none focus:ring-4 focus:ring-blue-300 font-medium rounded-full text-xs px-5 py-2.5 text-center">
