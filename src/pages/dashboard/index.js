@@ -149,7 +149,7 @@ export default function Dashboard({ result }) {
   );
 }
 
-export async function getServerSideProps() {
+export async function getStaticProps() {
   const res = await fetch(
     `https://dev-example.sanbercloud.com/api/job-vacancy`
   );
