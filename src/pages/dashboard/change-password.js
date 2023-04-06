@@ -1,5 +1,4 @@
 import Layout from "@/components/layout";
-import NavBar from "@/components/navbar";
 import { useState } from "react";
 import Cookies from "js-cookie";
 
@@ -40,7 +39,6 @@ export default function ChangePassword() {
   };
   return (
     <Layout>
-      <NavBar />
       <h1>Change Password</h1>
       <form onSubmit={handleUpdatePassword}>
         <div className="mb-6">

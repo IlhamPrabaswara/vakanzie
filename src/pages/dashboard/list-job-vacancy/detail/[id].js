@@ -1,5 +1,4 @@
 import Layout from "@/components/layout";
-import NavBar from "@/components/navbar";
 
 export async function getServerSideProps(context) {
   const { id } = context.query;
@@ -13,7 +12,6 @@ export async function getServerSideProps(context) {
 const JobVacancyDetail = ({ result }) => {
   return (
     <Layout>
-      <NavBar />
       <p>{`Hello it's ${result.job_description}`}</p>
     </Layout>
   );

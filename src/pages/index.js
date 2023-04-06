@@ -1,5 +1,4 @@
 import Layout from "@/components/layout";
-import NavBar from "@/components/navbar";
 import Head from "next/head";
 import Link from "next/link";
 import { useState } from "react";
@@ -15,7 +14,6 @@ export default function Home({ jobData }) {
         <title>Vakanzie - Home</title>
       </Head>
       <Layout>
-        <NavBar />
         <div className="h-[75vh] flex justify-center flex-col items-center">
           <p className="text-4xl font-bold text-center mb-10 md:text-6xl md:w-[500px]">
             Get the <span className="text-blue-700">Right Job</span> You Deserve
@@ -69,11 +67,11 @@ export default function Home({ jobData }) {
         </div>
         <main className="grid mx-auto gap-5 mt-5 md:grid-cols-3">
           {jobData
-            .filter((item) => {
-              return search.toLowerCase() === ""
+            .filter((item) =>
+              search.toLowerCase() === ""
                 ? item
-                : item.title.toLowerCase().includes(search.toLowerCase());
-            })
+                : item.title.toLowerCase().includes(search.toLowerCase())
+            )
             .map((item) => (
               <div>
                 <Link
@@ -100,7 +98,9 @@ export default function Home({ jobData }) {
                   </div>
 
                   <p className="font-normal mb-10 text-sm text-gray-500 flex-grow">
-                    {item.job_description ? item.job_description.substring(0, 200) + "..." : null}
+                    {item.job_description
+                      ? item.job_description.substring(0, 200) + "..."
+                      : null}
                   </p>
                   <div className="flex justify-between items-center">
                     <p className="text-white bg-blue-700 hover:bg-blue-800 focus:outline-none focus:ring-4 focus:ring-blue-300 font-medium rounded-full text-xs px-5 py-2.5 text-center">

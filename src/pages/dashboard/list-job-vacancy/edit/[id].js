@@ -1,5 +1,4 @@
 import Layout from "@/components/layout";
-import NavBar from "@/components/navbar";
 import { useEffect, useState } from "react";
 import Cookies from "js-cookie";
 import Router from "next/router";
@@ -80,7 +79,6 @@ const JobVacancyEdit = ({ result }) => {
   };
   return (
     <Layout>
-      <NavBar />
       <h1>Edit Job Vacancy</h1>
       <form onSubmit={handleUpdate}>
         <div className="mb-6">

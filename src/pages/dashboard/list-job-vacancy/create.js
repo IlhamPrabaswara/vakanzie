@@ -1,7 +1,7 @@
 import Layout from "@/components/layout";
-import NavBar from "@/components/navbar";
 import { useState } from "react";
 import Cookies from "js-cookie";
+import SideBar from "@/components/sidebar";
 
 const JobVacancyCreate = () => {
   const [input, setInput] = useState({
@@ -49,11 +49,11 @@ const JobVacancyCreate = () => {
     };
     const response = await fetch(endpoint, options);
     const result = await response.json();
-    alert("Data is successfully updated");
+    alert("Data is successfully created");
   };
   return (
     <Layout>
-      <NavBar />
+      <SideBar/>
       <h1>Job Vacancy Create</h1>
       <form onSubmit={handleCreate}>
         <div className="mb-6">

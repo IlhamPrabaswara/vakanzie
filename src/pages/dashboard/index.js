@@ -1,16 +1,16 @@
 import Layout from "@/components/layout";
-import NavBar from "@/components/navbar";
+import SideBar from "@/components/sidebar";
 import Head from "next/head";
 import Link from "next/link";
 
 export default function Dashboard({ result }) {
   return (
     <>
-    <Head>
-      <title>Vakanzie - Dashboard</title>
-    </Head>
+      <Head>
+        <title>Vakanzie - Dashboard</title>
+      </Head>
       <Layout>
-        <NavBar />
+        <SideBar />
         <div className="relative overflow-x-auto shadow-md sm:rounded-lg">
           <table className="w-full text-sm text-left text-gray-500">
             <thead className="text-xs text-gray-700 uppercase bg-gray-50">
