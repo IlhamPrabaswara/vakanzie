@@ -18,14 +18,14 @@ export default function NavBar() {
     setIsCookies(Cookies.get("token"));
   }, []);
   return (
-    <nav className="bg-white border-gray-200 px-2 sm:px-4 py-2.5 rounded">
+    <nav className="bg-white border-gray-200 px-2 sm:px-4 py-2.5 rounded mb-[50px]">
       <div className="container flex flex-wrap items-center justify-between mx-auto">
         <Link href="/" className="flex items-center">
           <span className="self-center text-xl font-semibold whitespace-nowrap">
             Vakanzie
           </span>
         </Link>
-        <div className="flex items-center md:order-2">
+        <div className="flex items-center md:order-2 relative">
           {isCookies === undefined ? (
             <Link href="/dashboard/login">Login</Link>
           ) : (
@@ -50,7 +50,7 @@ export default function NavBar() {
           <div
             className={`${
               isProfileHidden ? "hidden" : null
-            } z-50 my-4 text-base list-none bg-white divide-y divide-gray-100 rounded-lg shadow absolute top-10 right-10`}
+            } z-50 my-4 text-base list-none bg-white divide-y divide-gray-100 rounded-lg shadow absolute top-7 right-1 w-[150px]`}
             id="user-dropdown"
           >
             <ul className="py-2" aria-labelledby="user-menu-button">
@@ -85,7 +85,7 @@ export default function NavBar() {
               </li>
             </ul>
           </div>
-          <button
+          {/* <button
             onClick={handleHidden}
             data-collapse-toggle="mobile-menu-2"
             type="button"
@@ -107,7 +107,7 @@ export default function NavBar() {
                 clipRule="evenodd"
               ></path>
             </svg>
-          </button>
+          </button> */}
         </div>
         <div
           className={`items-center justify-between ${
