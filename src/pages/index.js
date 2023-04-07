@@ -23,7 +23,7 @@ export default function Home({ jobData }) {
           </p>
           <form>
             <label
-              for="default-search"
+              htmlFor="default-search"
               className="mb-2 text-sm font-medium text-gray-900 sr-only"
             >
               Search
@@ -39,9 +39,9 @@ export default function Home({ jobData }) {
                   xmlns="http://www.w3.org/2000/svg"
                 >
                   <path
-                    stroke-linecap="round"
-                    stroke-linejoin="round"
-                    stroke-width="2"
+                    strokeLinecap="round"
+                    strokeLinejoin="round"
+                    strokeWidth="2"
                     d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z"
                   ></path>
                 </svg>
@@ -73,7 +73,7 @@ export default function Home({ jobData }) {
                 : item.title.toLowerCase().includes(search.toLowerCase())
             )
             .map((item) => (
-              <div>
+              <div key={item.id}>
                 <Link
                   href={`/dashboard/list-job-vacancy/detail/${item.id}`}
                   className="flex flex-col p-6 bg-white border border-gray-200 rounded-lg shadow hover:bg-gray-100 min-h-[350px]"
