@@ -53,7 +53,7 @@ const JobVacancyCreate = () => {
   };
   return (
     <Layout>
-      <SideBar/>
+      <SideBar />
       <h1>Job Vacancy Create</h1>
       <form onSubmit={handleCreate}>
         <div className="mb-6">
@@ -108,73 +108,75 @@ const JobVacancyCreate = () => {
             required
           />
         </div>
-        <div className="mb-6">
-          <label
-            htmlFor="job_type"
-            className="block mb-2 text-sm font-medium text-gray-900"
-          >
-            Job type
-          </label>
-          <input
-            type="text"
-            name="job_type"
-            id="job_type"
-            className="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5"
-            value={input.job_type}
-            onChange={handleChange}
-            required
-          />
-        </div>
-        <div className="mb-6">
-          <label
-            htmlFor="job_tenure"
-            className="block mb-2 text-sm font-medium text-gray-900"
-          >
-            Job tenure
-          </label>
-          <input
-            type="text"
-            name="job_tenure"
-            id="job_tenure"
-            className="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5"
-            value={input.job_tenure}
-            onChange={handleChange}
-            required
-          />
-        </div>
-        <div className="mb-6">
-          <label
-            htmlFor="job_status"
-            className="block mb-2 text-sm font-medium text-gray-900"
-          >
-            Job status
-          </label>
-          <input
-            type="text"
-            name="job_status"
-            id="job_status"
-            className="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5"
-            value={input.job_status}
-            onChange={handleChange}
-            required
-          />
-        </div>
-        <div className="mb-6">
-          <label
-            htmlFor="company_name"
-            className="block mb-2 text-sm font-medium text-gray-900"
-          >
-            Company name
-          </label>
-          <input
-            type="text"
-            name="company_name"
-            id="company_name"
-            className="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5"
-            value={input.company_name}
-            onChange={handleChange}
-            required
-          />
+        <div className="grid md:grid-cols-2 md:gap-[10px]">
+          <div className="mb-6">
+            <label
+              htmlFor="job_type"
+              className="block mb-2 text-sm font-medium text-gray-900"
+            >
+              Job type
+            </label>
+            <input
+              type="text"
+              name="job_type"
+              id="job_type"
+              className="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5"
+              value={input.job_type}
+              onChange={handleChange}
+              required
+            />
+          </div>
+          <div className="mb-6">
+            <label
+              htmlFor="job_tenure"
+              className="block mb-2 text-sm font-medium text-gray-900"
+            >
+              Job tenure
+            </label>
+            <input
+              type="text"
+              name="job_tenure"
+              id="job_tenure"
+              className="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5"
+              value={input.job_tenure}
+              onChange={handleChange}
+              required
+            />
+          </div>
+          <div className="mb-6">
+            <label
+              htmlFor="job_status"
+              className="block mb-2 text-sm font-medium text-gray-900"
+            >
+              Job status
+            </label>
+            <input
+              type="text"
+              name="job_status"
+              id="job_status"
+              className="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5"
+              value={input.job_status}
+              onChange={handleChange}
+              required
+            />
+          </div>
+          <div className="mb-6">
+            <label
+              htmlFor="company_name"
+              className="block mb-2 text-sm font-medium text-gray-900"
+            >
+              Company name
+            </label>
+            <input
+              type="text"
+              name="company_name"
+              id="company_name"
+              className="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5"
+              value={input.company_name}
+              onChange={handleChange}
+              required
+            />
+          </div>
         </div>
         <div className="mb-6">
           <label
