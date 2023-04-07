@@ -1,24 +1,26 @@
 import Link from "next/link";
-import { useEffect, useState } from "react";
+import { useContext, useEffect, useState } from "react";
 import Cookies from "js-cookie";
 import Router from "next/router";
+import { DataContext } from "./dataContext";
 
 export default function NavBar() {
-  const [isHidden, setHidden] = useState("false");
+  // const [isHidden, setHidden] = useState("false");
   const [isProfileHidden, setProfileHidden] = useState("false");
   const [isCookies, setIsCookies] = useState("");
-
-  const handleHidden = () => {
-    setHidden(!isHidden);
-  };
+  const { profilePicture, setProfilePicture } = useContext(DataContext);
+  // const handleHidden = () => {
+  //   setHidden(!isHidden);
+  // };
   const handleProfileHidden = () => {
     setProfileHidden(!isProfileHidden);
   };
   useEffect(() => {
+    setProfilePicture(localStorage.getItem("imageUrl"));
     setIsCookies(Cookies.get("token"));
   }, []);
   return (
-    <nav className="bg-white border-gray-200 px-2 sm:px-4 py-2.5 rounded mb-[50px]">
+    <nav className="bg-white border-gray-200 py-2.5 rounded mb-[50px]">
       <div className="container flex flex-wrap items-center justify-between mx-auto">
         <Link href="/" className="flex items-center">
           <span className="self-center text-xl font-semibold whitespace-nowrap">
@@ -41,7 +43,7 @@ export default function NavBar() {
               <span className="sr-only">Open user menu</span>
               <img
                 className="w-8 h-8 rounded-full"
-                src="https://api.dicebear.com/5.x/adventurer/svg?seed=Bandit&backgroundColor=b6e3f4"
+                src={profilePicture}
                 alt="user photo"
               />
             </button>
@@ -72,7 +74,7 @@ export default function NavBar() {
               </li>
 
               <li>
-                <a
+                <Link
                   onClick={() => {
                     Cookies.remove("token");
                     Router.push("/dashboard/login");
@@ -81,7 +83,7 @@ export default function NavBar() {
                   className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100"
                 >
                   Sign out
-                </a>
+                </Link>
               </li>
             </ul>
           </div>
@@ -109,13 +111,13 @@ export default function NavBar() {
             </svg>
           </button> */}
         </div>
-        <div
+        {/* <div
           className={`items-center justify-between ${
             isHidden ? "hidden" : null
           } w-full md:flex md:w-auto md:order-1`}
           id="mobile-menu-2"
         >
-          {/* <ul className="flex flex-col p-4 mt-4 border border-gray-100 rounded-lg bg-gray-50 md:flex-row md:space-x-8 md:mt-0 md:text-sm md:font-medium md:border-0 md:bg-white">
+          <ul className="flex flex-col p-4 mt-4 border border-gray-100 rounded-lg bg-gray-50 md:flex-row md:space-x-8 md:mt-0 md:text-sm md:font-medium md:border-0 md:bg-white">
             <li>
               <a
                 href="#"
@@ -125,8 +127,8 @@ export default function NavBar() {
                 Home
               </a>
             </li>
-          </ul> */}
-        </div>
+          </ul>
+        </div> */}
       </div>
     </nav>
   );
