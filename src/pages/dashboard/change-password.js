@@ -43,7 +43,7 @@ export default function ChangePassword() {
       <form onSubmit={handleUpdatePassword}>
         <div className="mb-6">
           <label
-            for="current_password"
+            htmlFor="current_password"
             className="block mb-2 text-sm font-medium text-gray-900"
           >
             Current password
@@ -61,7 +61,7 @@ export default function ChangePassword() {
         </div>
         <div className="mb-6">
           <label
-            for="new_password"
+            htmlFor="new_password"
             className="block mb-2 text-sm font-medium text-gray-900"
           >
             New password
@@ -78,7 +78,7 @@ export default function ChangePassword() {
         </div>
         <div className="mb-6">
           <label
-            for="new_confirm_password"
+            htmlFor="new_confirm_password"
             className="block mb-2 text-sm font-medium text-gray-900"
           >
             Repeat new password
