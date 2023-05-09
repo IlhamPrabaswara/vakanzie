@@ -20,7 +20,7 @@ export default function NavBar() {
     setIsCookies(Cookies.get("token"));
   }, []);
   return (
-    <nav className="bg-white border-gray-200 py-2.5 rounded mb-[50px]">
+    <nav className="bg-[#F9F9FC] border-gray-200 py-2.5 rounded mb-[50px]">
       <div className="container flex flex-wrap items-center justify-between mx-auto">
         <Link href="/" className="flex items-center">
           <span className="self-center text-xl font-semibold whitespace-nowrap">
