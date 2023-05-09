@@ -15,14 +15,16 @@ export default function Home({ jobData }) {
         <title>Vakanzie - Home</title>
       </Head>
       <Layout>
-        <div className="h-[75vh] flex justify-center flex-col items-center">
-          <p className="text-4xl font-bold text-center mb-10 md:text-6xl md:w-[500px]">
-            Get the <span className="text-blue-700">Right Job</span> You Deserve
+        <div className="h-[50vh] flex justify-center flex-col items-center">
+          <p className="font-bold text-5xl leading-[58px] mb-2.5">
+            Find your dream job at{" "}
+            <span className="text-[#006492]">Vakanzie</span>
           </p>
-          <p className="text-center mb-10">
-            Million jobs listed here! You're dream job is waiting.
+          <p className="font-normal text-xl leading-[1.6em]">
+            Get the most exciting jobs from all around the world and grow your
+            career.
           </p>
-          <form>
+          {/* <form>
             <label
               htmlFor="default-search"
               className="mb-2 text-sm font-medium text-gray-900 sr-only"
@@ -57,15 +59,16 @@ export default function Home({ jobData }) {
                 onChange={handleChange}
                 required
               />
-              {/* <button
+              <button
               type="submit"
               className="text-white absolute right-2.5 bottom-2.5 bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-full text-sm px-4 py-2"
             >
               Search
-            </button> */}
+            </button>
             </div>
-          </form>
+          </form> */}
         </div>
+        <h2>Recent Jobs</h2>
         <main className="grid mx-auto gap-5 mt-5 md:grid-cols-3">
           {jobData
             .filter((item) =>
@@ -119,7 +122,7 @@ export default function Home({ jobData }) {
           tabindex="-1"
           className={`${
             viewModal ? null : "hidden"
-          } fixed z-50 flex flex-col md:flex-row justify-between w-[calc(50%-2rem)] p-4 -translate-x-1/2 bg-white border border-gray-100 rounded-lg shadow-sm lg:max-w-7xl left-1/2 bottom-6`}
+          } fixed z-50 flex flex-col md:flex-row justify-between w-[calc(100%-2rem)] p-4 -translate-x-1/2 bg-white border border-gray-300 rounded-lg shadow-sm lg:max-w-7xl left-1/2 bottom-6`}
         >
           <div class="flex flex-col items-start mb-3 mr-4 md:items-center md:flex-row md:mb-0">
             <p class="flex items-center text-sm font-normal text-gray-500">
